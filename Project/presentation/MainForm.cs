@@ -16,5 +16,10 @@ namespace Project.presentation
         {
             InitializeComponent();
         }
+
+        private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

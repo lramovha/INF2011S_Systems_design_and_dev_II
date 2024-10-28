@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,15 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookingDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookingDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Business\Customer.cs" />
+    <Compile Include="Business\AccountManager.cs" />
     <Compile Include="Business\CustomerController.cs" />
-    <Compile Include="Data\CustomerDB.cs" />
-    <Compile Include="Data\DB.cs" />
+    <Compile Include="Business\PaymentManager.cs" />
+    <Compile Include="Business\ReportsManager.cs" />
+    <Compile Include="Business\ReservationManager.cs" />
+    <Compile Include="Business\RoomServiceManager.cs" />
+    <Compile Include="Business\StaffManager.cs" />
+    <Compile Include="Data\DatabaseConnection.cs" />
+    <Compile Include="Data\Guest.cs" />
+    <Compile Include="Data\Payment.cs" />
+    <Compile Include="Data\Reservation.cs" />
+    <Compile Include="Data\Room.cs" />
+    <Compile Include="Data\Staff.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,25 +81,58 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
-    <Compile Include="presentation\CustomerListingForm.cs">
+    <Compile Include="presentation\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentation\CustomerListingForm.Designer.cs">
-      <DependentUpon>CustomerListingForm.cs</DependentUpon>
+    <Compile Include="presentation\CheckInForm.Designer.cs">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentation\MDIParent1.cs">
+    <Compile Include="presentation\CheckOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentation\MDIParent1.Designer.cs">
-      <DependentUpon>MDIParent1.cs</DependentUpon>
+    <Compile Include="presentation\CheckOutForm.Designer.cs">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\GuestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\GuestForm.Designer.cs">
+      <DependentUpon>GuestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\ReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\ReservationForm.Designer.cs">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\RoomAllocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\RoomAllocationForm.Designer.cs">
+      <DependentUpon>RoomAllocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\StaffManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\StaffManagementForm.Designer.cs">
+      <DependentUpon>StaffManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="presentation\CustomerListingForm.resx">
-      <DependentUpon>CustomerListingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="presentation\MDIParent1.resx">
-      <DependentUpon>MDIParent1.cs</DependentUpon>
+    <EmbeddedResource Include="presentation\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,17 +143,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BookingDatabaseDataSet.xsc">
-      <DependentUpon>BookingDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BookingDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookingDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BookingDatabaseDataSet.xss">
-      <DependentUpon>BookingDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,15 +157,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BookingDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BookingDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BookingDatabase.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -151,6 +168,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="PhumlaKamnandiDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PhumlaKamnandiDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PhumlaKamnandiDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

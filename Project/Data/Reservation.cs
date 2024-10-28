@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.Data
 {
-    internal class Reservation
+    public class Reservation
     {
     }
 }
