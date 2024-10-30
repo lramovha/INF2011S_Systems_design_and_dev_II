@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Project.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\AccountManager.cs" />
-    <Compile Include="Business\CustomerController.cs" />
+    <Compile Include="Business\GuestManager.cs" />
     <Compile Include="Business\PaymentManager.cs" />
     <Compile Include="Business\ReportsManager.cs" />
     <Compile Include="Business\ReservationManager.cs" />
@@ -74,13 +77,11 @@
     <Compile Include="Data\Reservation.cs" />
     <Compile Include="Data\Room.cs" />
     <Compile Include="Data\Staff.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="PhumlaKamnandiDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhumlaKamnandiDataDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person.cs" />
     <Compile Include="presentation\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentation\GuestForm.resx">
+      <DependentUpon>GuestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +147,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
+    <None Include="PhumlaKamnandiDataDataSet.xsc">
+      <DependentUpon>PhumlaKamnandiDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PhumlaKamnandiDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhumlaKamnandiDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhumlaKamnandiDataDataSet.xss">
+      <DependentUpon>PhumlaKamnandiDataDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,9 +168,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -169,12 +182,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PhumlaKamnandiDatabase.mdf">
+    <Content Include="PhumlaKamnandiData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="PhumlaKamnandiDatabase_log.ldf">
+    <Content Include="PhumlaKamnandiData_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PhumlaKamnandiDatabase.mdf</DependentUpon>
+      <DependentUpon>PhumlaKamnandiData.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

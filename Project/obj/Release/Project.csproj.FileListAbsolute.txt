@@ -1,0 +1,7 @@
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.csproj.AssemblyReference.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.presentation.GuestForm.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.presentation.MainForm.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.Properties.Resources.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.csproj.GenerateResource.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Release\Project.csproj.CoreCompileInputs.cache

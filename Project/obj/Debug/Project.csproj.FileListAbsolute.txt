@@ -16,3 +16,17 @@ C:\Users\lasyr\Desktop\ZaLes\School\2023\INF2011S\project\Project MLNUDZ001 RMVL
 C:\Users\lasyr\Desktop\ZaLes\School\2023\INF2011S\project\Project MLNUDZ001 RMVLAS001\Project\obj\Debug\Project.csproj.SuggestedBindingRedirects.cache
 C:\Users\lasyr\Desktop\ZaLes\School\2023\INF2011S\project\Project MLNUDZ001 RMVLAS001\Project\obj\Debug\Project.exe
 C:\Users\lasyr\Desktop\ZaLes\School\2023\INF2011S\project\Project MLNUDZ001 RMVLAS001\Project\obj\Debug\Project.pdb
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\Project.exe.config
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\Project.exe
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\Project.pdb
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.presentation.GuestForm.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.presentation.MainForm.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.exe
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.pdb
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\PhumlaKamnandiData.mdf
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\PhumlaKamnandiData_log.ldf

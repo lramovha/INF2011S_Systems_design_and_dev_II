@@ -8,7 +8,7 @@ using Project.presentation;
 
 namespace Project
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -18,7 +18,7 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIParent1());
+            Application.Run(new GuestForm());
         }
     }
 }
