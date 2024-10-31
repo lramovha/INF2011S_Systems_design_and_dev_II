@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project.Data
 {
-    internal class Room
+    public class Room
     {
+        public int RoomID { get; set; }           // Primary Key
+        public string RoomNumber { get; set; }
+        public string Type { get; set; }
+        public decimal Price { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }

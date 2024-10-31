@@ -18,7 +18,7 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GuestForm());
+            Application.Run(new ReservationForm());
         }
     }
 }

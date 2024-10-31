@@ -69,7 +69,7 @@
     <Compile Include="Business\PaymentManager.cs" />
     <Compile Include="Business\ReportsManager.cs" />
     <Compile Include="Business\ReservationManager.cs" />
-    <Compile Include="Business\RoomServiceManager.cs" />
+    <Compile Include="Business\RoomManager.cs" />
     <Compile Include="Business\StaffManager.cs" />
     <Compile Include="Data\DatabaseConnection.cs" />
     <Compile Include="Data\Guest.cs" />
@@ -118,11 +118,11 @@
     <Compile Include="presentation\ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentation\RoomAllocationForm.cs">
+    <Compile Include="presentation\RoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentation\RoomAllocationForm.Designer.cs">
-      <DependentUpon>RoomAllocationForm.cs</DependentUpon>
+    <Compile Include="presentation\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="presentation\StaffManagementForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

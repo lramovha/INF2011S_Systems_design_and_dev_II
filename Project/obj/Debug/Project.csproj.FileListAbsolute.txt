@@ -30,3 +30,5 @@ C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Proj
 C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.pdb
 C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\PhumlaKamnandiData.mdf
 C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\bin\Debug\PhumlaKamnandiData_log.ldf
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.presentation.RoomForm.resources
+C:\Users\lasyr\Desktop\ZaLes\School\2024\INF2011S_Systems_design_and_dev_II\Project\obj\Debug\Project.presentation.ReservationForm.resources
