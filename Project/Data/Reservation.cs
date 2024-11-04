@@ -14,5 +14,7 @@ namespace Project.Data
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public string Status { get; set; }
+        public decimal TotalPrice { get; set; } // New property for total price
     }
 }
+

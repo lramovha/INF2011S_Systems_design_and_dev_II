@@ -14,12 +14,13 @@ namespace Project.Business
         {
             using (var connection = db.GetConnection())
             {
-                var command = new SqlCommand("INSERT INTO Reservations (RoomID, GuestID, CheckInDate, CheckOutDate, TotalPrice) VALUES (@RoomID, @GuestID, @CheckInDate, @CheckOutDate, @TotalPrice)", connection);
+                var command = new SqlCommand("INSERT INTO Reservations (RoomID, GuestID, CheckInDate, CheckOutDate, Status, TotalPrice) VALUES (@RoomID, @GuestID, @CheckInDate, @CheckOutDate, @Status, @TotalPrice)", connection);
                 command.Parameters.AddWithValue("@RoomID", reservation.RoomID);
                 command.Parameters.AddWithValue("@GuestID", reservation.GuestID);
                 command.Parameters.AddWithValue("@CheckInDate", reservation.CheckInDate);
                 command.Parameters.AddWithValue("@CheckOutDate", reservation.CheckOutDate);
-               // command.Parameters.AddWithValue("@TotalPrice", reservation.TotalPrice);
+                command.Parameters.AddWithValue("@Status", reservation.Status);
+                command.Parameters.AddWithValue("@TotalPrice", reservation.TotalPrice); // Set TotalPrice
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -47,7 +48,8 @@ namespace Project.Business
                             GuestID = reader.GetInt32(2),
                             CheckInDate = reader.GetDateTime(3),
                             CheckOutDate = reader.GetDateTime(4),
-                            //TotalPrice = reader.GetDecimal(5)
+                            Status = reader.IsDBNull(5) ? null : reader.GetString(5),
+                            TotalPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6) // Retrieve TotalPrice
                         });
                     }
                 }
@@ -92,18 +94,20 @@ namespace Project.Business
         {
             using (var connection = db.GetConnection())
             {
-                var command = new SqlCommand("UPDATE Reservations SET RoomID = @RoomID, GuestID = @GuestID, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate, TotalPrice = @TotalPrice WHERE ReservationID = @ReservationID", connection);
+                var command = new SqlCommand("UPDATE Reservations SET RoomID = @RoomID, GuestID = @GuestID, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate, Status = @Status, TotalPrice = @TotalPrice WHERE ReservationID = @ReservationID", connection);
                 command.Parameters.AddWithValue("@RoomID", reservation.RoomID);
                 command.Parameters.AddWithValue("@GuestID", reservation.GuestID);
                 command.Parameters.AddWithValue("@CheckInDate", reservation.CheckInDate);
                 command.Parameters.AddWithValue("@CheckOutDate", reservation.CheckOutDate);
-                //command.Parameters.AddWithValue("@TotalPrice", reservation.TotalPrice);
+                command.Parameters.AddWithValue("@Status", reservation.Status);
+                command.Parameters.AddWithValue("@TotalPrice", reservation.TotalPrice); // Update TotalPrice
                 command.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
 
                 connection.Open();
                 command.ExecuteNonQuery();
             }
         }
+
 
         // Delete a reservation
         public void DeleteReservation(int reservationID)

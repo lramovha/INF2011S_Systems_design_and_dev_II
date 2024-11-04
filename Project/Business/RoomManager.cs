@@ -112,5 +112,33 @@ namespace Project.Business
 
             return availableRooms;
         }
+
+        public Room GetRoomById(int roomId)
+        {
+            Room room = null;
+            using (var connection = db.GetConnection())
+            {
+                var command = new SqlCommand("SELECT * FROM Rooms WHERE RoomID = @RoomID", connection);
+                command.Parameters.AddWithValue("@RoomID", roomId);
+
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        room = new Room
+                        {
+                            RoomID = reader.GetInt32(0),
+                            RoomNumber = reader.GetString(1),
+                            Type = reader.GetString(2),
+                            Price = reader.GetDecimal(3),
+                            IsAvailable = reader.GetBoolean(4)
+                        };
+                    }
+                }
+            }
+            return room;
+        }
+
     }
 }
