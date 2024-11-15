@@ -10,3 +10,6 @@ this is the form for adding the guests
 
 # Room form
 this is the form for adding rooms and relalative information
+
+# Reservation form
+this is where the we add the guest reservation details
